@@ -1,0 +1,28 @@
+## PHP OOP Bank System
+
+    A simple PHP project demonstrating Object-Oriented Programming (OOP) concepts such as Interfaces, Traits, Abstract Classes, Inheritance, Polymorphism, Encapsulation, Magic Methods, and Static properties in a banking system simulation.
+
+    This project includes Savings Accounts and Current Accounts, with deposit, withdrawal, and interest calculation functionality.
+
+| Concept              | How It’s Used                                                                          |
+| -------------------- | -------------------------------------------------------------------------------------- |
+| **Encapsulation**    | Private properties `$balance`, `$ownerName`, `$accountNumber` with getters.            |
+| **Inheritance**      | `SavingsAccount` and `CurrentAccount` inherit from `BankAccount`.                      |
+| **Polymorphism**     | Overriding `withdraw()` behaves differently for savings vs current accounts.           |
+| **Abstract Classes** | `BankAccount` defines common methods and abstract `calculateInterest()`.               |
+| **Interfaces**       | `AccountInterface` ensures all accounts implement `deposit`, `withdraw`, `getBalance`. |
+| **Traits**           | `LoggerTrait` reused for logging without inheritance.                                  |
+| **Magic Methods**    | `__construct`, `__toString`, `__get` for convenient object handling.                   |
+| **Static Members**   | Track total accounts with `BankAccount::$totalAccounts`.                               |
+
+## File Structure
+        php-bank-system/
+    ├── src/
+    │   ├── AccountInterface.php
+    │   ├── LoggerTrait.php
+    │   ├── BankAccount.php
+    │   ├── SavingsAccount.php
+    │   └── CurrentAccount.php
+    ├── index.php
+    └── README.md
+ 
